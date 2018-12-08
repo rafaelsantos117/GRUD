@@ -20,6 +20,8 @@ namespace GRUD
         OleDbDataReader dr;
         int ultimoregistro = 0;
         int primeiroregistro = 0;
+        bool anterior = false;
+        bool proximo = false;
         bool novo = false;
 
         public FrmClientes()
@@ -91,10 +93,16 @@ namespace GRUD
                 }
                 else
                 {
-                    if (cod < ultimoregistro)
+                    if (proximo == true)
                     {
                         RetornaDados(cod + 1);
+                        proximo = false;
                     }
+                    else if (anterior == true)
+                    {
+                        RetornaDados(cod - 1);
+                        anterior = false;
+                    } 
                     else
                     {
                         if (MessageBox.Show("Não há registros cadastrados, Deseja efetuar um cadastro?", "Atenção",
@@ -222,13 +230,17 @@ namespace GRUD
             if (novo == true)
             {
                 Cadastrar();
-                ultimoregistro++;
-                TxtCodigo.Text = ultimoregistro.ToString();
+                //ultimoregistro++;
+                /*TxtCodigo.Text = ultimoregistro.ToString();
                 TxtNome.Text = "";
                 TxtEndereco.Text = "";
                 MskTelefone.Text = "";
                 DtpDataCadastro.Text = "";
-                TxtNome.Focus();
+                TxtNome.Focus();*/
+                BtnPrimeiro.Enabled = true;
+                BtnUltimo.Enabled = true;
+                BtnAnterior.Enabled = true;
+                BtnProximo.Enabled = true;
             }
             else
             {
@@ -239,12 +251,13 @@ namespace GRUD
 
         private void BtnAnterior_Click(object sender, EventArgs e)
         {
+            anterior = true;
             int cod = int.Parse(TxtCodigo.Text);
             if (int.Parse(TxtCodigo.Text) > primeiroregistro)
             {
                 RetornaDados(cod - 1);
             }
-            else
+            else if (int.Parse(TxtCodigo.Text) == primeiroregistro)
             {
                 MessageBox.Show("Não há mais registros anteriores.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -252,6 +265,7 @@ namespace GRUD
 
         private void BtnProximo_Click(object sender, EventArgs e)
         {
+            proximo = true;
             int cod = int.Parse(TxtCodigo.Text);
             if (int.Parse(TxtCodigo.Text) < ultimoregistro)
             {
@@ -281,7 +295,6 @@ namespace GRUD
             BtnProximo.Enabled = false;
             BtnUltimo.Enabled = false;
             BtnGravar.Enabled = true;
-            BtnAnterior.Enabled = true;
             TxtCodigo.Text = (ultimoregistro + 1).ToString();
             TxtNome.Text = "";
             TxtEndereco.Text = "";

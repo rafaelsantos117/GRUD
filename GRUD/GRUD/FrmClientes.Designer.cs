@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmClientes));
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -131,71 +132,98 @@
             // 
             // BtnPrimeiro
             // 
-            this.BtnPrimeiro.Location = new System.Drawing.Point(20, 222);
+            this.BtnPrimeiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrimeiro.Image = ((System.Drawing.Image)(resources.GetObject("BtnPrimeiro.Image")));
+            this.BtnPrimeiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnPrimeiro.Location = new System.Drawing.Point(18, 222);
             this.BtnPrimeiro.Name = "BtnPrimeiro";
-            this.BtnPrimeiro.Size = new System.Drawing.Size(75, 23);
+            this.BtnPrimeiro.Size = new System.Drawing.Size(80, 23);
             this.BtnPrimeiro.TabIndex = 10;
-            this.BtnPrimeiro.Text = "<< Primeiro";
+            this.BtnPrimeiro.Text = "Primeiro";
+            this.BtnPrimeiro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnPrimeiro.UseVisualStyleBackColor = true;
             this.BtnPrimeiro.Click += new System.EventHandler(this.BtnPrimeiro_Click);
             // 
             // BtnAnterior
             // 
-            this.BtnAnterior.Location = new System.Drawing.Point(101, 222);
+            this.BtnAnterior.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("BtnAnterior.Image")));
+            this.BtnAnterior.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAnterior.Location = new System.Drawing.Point(103, 222);
             this.BtnAnterior.Name = "BtnAnterior";
             this.BtnAnterior.Size = new System.Drawing.Size(75, 23);
             this.BtnAnterior.TabIndex = 11;
             this.BtnAnterior.Text = "Anterior";
+            this.BtnAnterior.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAnterior.UseVisualStyleBackColor = true;
             this.BtnAnterior.Click += new System.EventHandler(this.BtnAnterior_Click);
             // 
             // BtnProximo
             // 
-            this.BtnProximo.Location = new System.Drawing.Point(182, 222);
+            this.BtnProximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProximo.Image = ((System.Drawing.Image)(resources.GetObject("BtnProximo.Image")));
+            this.BtnProximo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnProximo.Location = new System.Drawing.Point(183, 222);
             this.BtnProximo.Name = "BtnProximo";
             this.BtnProximo.Size = new System.Drawing.Size(75, 23);
             this.BtnProximo.TabIndex = 12;
             this.BtnProximo.Text = "Próximo";
+            this.BtnProximo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProximo.UseVisualStyleBackColor = true;
             this.BtnProximo.Click += new System.EventHandler(this.BtnProximo_Click);
             // 
             // BtnUltimo
             // 
+            this.BtnUltimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUltimo.Image = ((System.Drawing.Image)(resources.GetObject("BtnUltimo.Image")));
+            this.BtnUltimo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnUltimo.Location = new System.Drawing.Point(263, 222);
             this.BtnUltimo.Name = "BtnUltimo";
             this.BtnUltimo.Size = new System.Drawing.Size(75, 23);
             this.BtnUltimo.TabIndex = 13;
-            this.BtnUltimo.Text = "Último >>";
+            this.BtnUltimo.Text = "Último";
+            this.BtnUltimo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnUltimo.UseVisualStyleBackColor = true;
             this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
             // BtnNovo
             // 
+            this.BtnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.Image = ((System.Drawing.Image)(resources.GetObject("BtnNovo.Image")));
+            this.BtnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnNovo.Location = new System.Drawing.Point(61, 261);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(75, 23);
             this.BtnNovo.TabIndex = 14;
             this.BtnNovo.Text = "Novo";
+            this.BtnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnNovo.UseVisualStyleBackColor = true;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // BtnGravar
             // 
+            this.BtnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGravar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGravar.Image")));
+            this.BtnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnGravar.Location = new System.Drawing.Point(142, 261);
             this.BtnGravar.Name = "BtnGravar";
             this.BtnGravar.Size = new System.Drawing.Size(75, 23);
             this.BtnGravar.TabIndex = 15;
             this.BtnGravar.Text = "Gravar";
+            this.BtnGravar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnGravar.UseVisualStyleBackColor = true;
             this.BtnGravar.Click += new System.EventHandler(this.BtnGravar_Click);
             // 
             // BtnApagar
             // 
+            this.BtnApagar.Image = ((System.Drawing.Image)(resources.GetObject("BtnApagar.Image")));
+            this.BtnApagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnApagar.Location = new System.Drawing.Point(223, 261);
             this.BtnApagar.Name = "BtnApagar";
             this.BtnApagar.Size = new System.Drawing.Size(75, 23);
             this.BtnApagar.TabIndex = 16;
             this.BtnApagar.Text = "Apagar";
+            this.BtnApagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnApagar.UseVisualStyleBackColor = true;
             this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
             // 
@@ -221,8 +249,9 @@
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblCodigo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClientes";
-            this.Text = "frmClientes";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
